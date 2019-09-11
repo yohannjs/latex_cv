@@ -1,0 +1,43 @@
+
+\documentclass[11pt, a4paper]{awesome-cv}
+\fontdir[fonts/]
+\newcommand*{\sectiondir}{resume/}
+\colorlet{awesome}{awesome-red}
+\usepackage{import}
+
+
+\name{Yohann Jacob}{Sandvik}
+%\address{Kvernbakken 28, 1414 Trollaasen, Norway}
+\mobile{(+47) 489-58-285} 
+%%% Social
+\email{yohannjsandvik@gmail.com}
+%\homepage{www.posquit0.com}
+%\github{posquit0}
+%\kaggle{}
+%\linkedin{yohann-sandvik-711073101}
+%%% Optionals
+\position{Student{\enskip\cdotp\enskip}Electronic Engineering{\enskip\cdotp\enskip}Born June 17. 1995}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Yohann Jacob Sandvik~~~·~~~Résumé}
+  {\thepage}
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+
+%%% Import contents
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{extracurricular.tex}
+\import{\sectiondir}{proglanguages.tex}
+%\import{\sectiondir}{languages.tex}
+
+\end{document}
