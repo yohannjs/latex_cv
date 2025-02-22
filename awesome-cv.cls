@@ -582,6 +582,23 @@
   \\
 }
 
+% Define an environment for cvSmallExp
+\newenvironment{cvSmallExps}{
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{15cm}}
+}{
+    \end{tabular*}
+  \end{center}
+}
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvSmallExp{<date>}{<company>}{<position>}
+\newcommand*{\cvSmallExp}[3]{
+  \honordatestyle{#1} & \honorpositionstyle{#2}, \honortitlestyle{#3}
+  \\
+}
+
 % Define an environment for cvskill
 \newenvironment{cvskills}{
   \begin{center}
@@ -630,6 +647,19 @@
   \paragraphstyle{#1}
   \color{gray}\vhrulefill{0.9pt}
   \par\nobreak\addvspace{0.4ex}
+}
+
+% Define a paragraph for CV
+\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand*{\RelevantSkillsStyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+
+\newenvironment{cvRelevantSkills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-3mm}
+  \RelevantSkillsStyle % \paragraphstyle
+}{%
+  \par
+  \vspace{2mm}
 }
 
 % Define a title of the cover letter

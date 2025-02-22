@@ -1,9 +1,9 @@
-
 \documentclass[11pt, a4paper]{awesome-cv}
 \fontdir[fonts/]
 \newcommand*{\sectiondir}{resume/}
 \colorlet{awesome}{awesome-red}
 \usepackage{import}
+\usepackage[none]{hyphenat}
 
 
 \name{Yohann Jacob}{Sandvik}
@@ -14,9 +14,9 @@
 %\homepage{www.posquit0.com}
 \github{yohannjs}
 %\kaggle{}
-\linkedin{yohann-sandvik-711073101}
+\linkedin{yohann-jacob-sandvik-711073101}
 %%% Optionals
-\position{Student{\enskip\cdotp\enskip}Electronic Engineering{\enskip\cdotp\enskip}Born June 17. 1995}
+\position{Data Science{\enskip\cdotp\enskip}Computer Vision{\enskip\cdotp\enskip}Embedded Developer{\enskip\cdotp\enskip}Born June 17. 1995}
 
 
 
@@ -26,7 +26,7 @@
 %%% Make a footer for CV with three arguments(<left>, <center>, <right>)
 \makecvfooter
   {\today}
-  {Yohann Jacob Sandvik~~~·~~~Résumé}
+  {Yohann Jacob Sandvik}
   {\thepage}
 
 \begin{document}
@@ -34,10 +34,14 @@
 \makecvheader
 
 %%% Import contents
-\import{\sectiondir}{education.tex}
-\import{\sectiondir}{experience.tex}
-\import{\sectiondir}{extracurricular.tex}
-\import{\sectiondir}{proglanguages.tex}
-%\import{\sectiondir}{languages.tex}
+% \import{\sectiondir}{relevant_skills.tex}
+% \import{\sectiondir}{education.tex}
+% \import{\sectiondir}{experience.tex}
+
+\input{resume/relevant_skills.tex}
+\input{resume/education.tex}
+\input{resume/experience.tex}
+\input{resume/internships_and_voluntary.tex}
+
 
 \end{document}
