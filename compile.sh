@@ -1,1 +1,1 @@
-xelatex resume.tex
+xelatex -interaction=nonstopmode resume.tex

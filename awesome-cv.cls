@@ -228,11 +228,12 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrycompanystyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{darktext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
@@ -541,6 +542,17 @@
   \end{tabular*}
 }
 
+% Define an entry of cv information
+% Usage: \cventryYJS{<position>}{<company>}{<location>}{<date>}{<description>}
+\newcommand*{\cventryYJS}[5]{
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{11cm} R{7cm}}
+      \entrytitlestyle{#1} \entrycompanystyle{at #2} & \entrydatestyle{#4, } \entrylocationstyle{#3} \\
+      \multicolumn{2}{L{17cm}}{\descriptionstyle{#5}} \\
+  \end{tabular*}
+}
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{
   \begin{center}
@@ -586,8 +598,8 @@
 \newenvironment{cvSmallExps}{
   \begin{center}
     \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{15cm}}
+    \setlength{\extrarowheight}{5pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} R{2.5cm} L{14cm}}
 }{
     \end{tabular*}
   \end{center}
