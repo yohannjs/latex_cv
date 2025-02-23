@@ -4,6 +4,7 @@
 \colorlet{awesome}{awesome-red}
 \usepackage{import}
 \usepackage[none]{hyphenat}
+\usepackage{graphicx}
 
 
 \name{Yohann Jacob}{Sandvik}
@@ -25,13 +26,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Make a footer for CV with three arguments(<left>, <center>, <right>)
 \makecvfooter
-  {\today}
+  % {\today}
   {Yohann Jacob Sandvik}
   {\thepage}
 
 \begin{document}
 %%% Make a header for CV with personal data
-\makecvheader
+%%% Add the image in the top left corner
+\begin{minipage}[l]{0.2\textwidth}
+  \includegraphics[width=\textwidth]{YJS.jpg} % Adjust the width as needed
+\end{minipage}
+\begin{minipage}[r]{0.75\textwidth}
+  \makecvheader
+\end{minipage}
 
 %%% Import contents
 % \import{\sectiondir}{relevant_skills.tex}

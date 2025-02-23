@@ -225,7 +225,7 @@
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{20pt}{1em}\headerfont\bfseries\color{text} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{7pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
@@ -392,8 +392,8 @@
 % Define a header for CV
 % Usage: \makecvheader
 \newcommand*{\makecvheader}{
-  \begin{center}
-    \headerfirstnamestyle{
+  % \begin{center}
+    \hspace{1em}\headerfirstnamestyle{
       \@firstname
     } \headerlastnamestyle{
       \@lastname
@@ -487,7 +487,7 @@
     \ifthenelse{\isundefined{\@quote}}
       {}
       {\vspace{6.0mm}\headerquotestyle{\@quote\\}\vspace{5.0mm}}
-  \end{center}
+  % \end{center}
 }
 
 % Define a footer for CV
